@@ -10,6 +10,18 @@ function useCardNumbers() {
   const [cardNumberMaxLength, setCardNumberMaxLength] = useState(16);
   const [formattedCardNumbers, setFormattedCardNumbers] = useState("");
 
+  /**
+   * @example checkCardBrand("4") // visa
+   * @example checkCardBrand("51 ~ 55") // masterCard
+   * @example checkCardBrand("36") // diners
+   * @example checkCardBrand("34") // amex
+   * @example checkCardBrand("37") // amex
+   * @example checkCardBrand("624 ~ 626") // unionPay
+   * @example checkCardBrand("6282 ~ 6288") // unionPay
+   * @example checkCardBrand("622126 ~ 622925") // unionPay
+   *
+   * @param value input으로 들어오는 string
+   */
   const checkCardBrand = (value: string) => {
     const cardBrand = getCardBrand(value);
     const maxLength = getCardNumbersMaxLength(cardBrand);
@@ -44,14 +56,13 @@ function useCardNumbers() {
 
   const getCardNumbersMaxLength = (cardBrand: string): number => {
     switch (cardBrand) {
+      case "diners":
+        return 14;
+      case "amex":
+        return 15;
       case "visa":
       case "masterCard":
       case "unionPay":
-        return 16;
-      case "amex":
-        return 15;
-      case "diners":
-        return 14;
       default:
         return 16;
     }
