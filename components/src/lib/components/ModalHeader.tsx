@@ -6,7 +6,7 @@ const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--black-color);
+  color: #000000;
 `;
 
 const CloseIcon = styled.img`

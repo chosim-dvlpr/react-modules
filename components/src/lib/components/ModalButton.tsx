@@ -7,14 +7,14 @@ const ButtonContainer = styled.div`
 `;
 
 const ButtonStyle = styled.button`
-  background-color: var(--button-background-color);
-  color: var(--white-color);
+  background-color: #333333;
+  color: #ffffff;
   width: 8rem;
   height: 3.6rem;
   border-radius: 0.5rem;
   border: none;
 
-  font-family: var(--font-Noto-Sans-KR);
+  font-family: Noto Sans KR;
   font-size: 15px;
   font-weight: 700;
   line-height: 21.72px;
@@ -23,8 +23,8 @@ const ButtonStyle = styled.button`
 
 const WhiteButtonStyle = styled(ButtonStyle)`
   background-color: transparent;
-  border: 1px solid var(--button-gray-color);
-  color: var(--button-gray-color);
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  color: rgba(51, 51, 51, 0.75);
 `;
 
 interface ModalButtonType {

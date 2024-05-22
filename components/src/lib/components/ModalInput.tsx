@@ -8,14 +8,14 @@ const ModalInputStyle = styled.input`
   gap: 0.8rem;
   padding: 0.8rem;
   border-radius: 0.4rem;
-  border: 0.1rem solid var(--black-color);
+  border: 0.1rem solid #000000;
 
   font-size: 11px;
   font-weight: 400;
   line-height: 14.88px;
   text-align: left;
 
-  color: var(--black-color);
+  color: #000000;
 `;
 
 interface ModalInputType {

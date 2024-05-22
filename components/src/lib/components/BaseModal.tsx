@@ -19,7 +19,7 @@ const BackDrop = styled.div<BackDropProps>`
     width: 100%;
     height: 100%;
     backdrop-filter: blur(5px);
-    background-color: var(--gray-backdrop-color);
+    background-color: rgba(0, 0, 0, 0.35);
     display: ${props.$display};
   `}
 `;
@@ -70,7 +70,7 @@ const Container = styled.div<ContainerProps>`
     padding: 2.4rem 3.2rem;
     box-sizing: border-box;
     border-radius: 0.8rem;
-    background-color: var(--white-color);
+    background-color: #ffffff;
     ${calculateModalSize(props.$size)}
     ${calculateModalPosition(props.$position)}
   `}
