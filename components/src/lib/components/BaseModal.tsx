@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import '../style.css';
 import { MouseEvent } from 'react';
 
 interface ContainerProps {

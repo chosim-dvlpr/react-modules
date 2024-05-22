@@ -9,19 +9,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  --font-size: 62.5%;
-  --font-Noto-Sans: Noto Sans;
-  --font-Noto-Sans-KR: Noto Sans KR;
-
-  --gray-backdrop-color: rgba(0, 0, 0, 0.35);
-  --white-color: #ffffff;
-  --black-color: #000000;
-  --sub-black-color: #0a0d13;
-  --gray-border-color: #cccccc;
-
-  --button-background-color: #333333;
-  --button-gray-color: rgba(51, 51, 51, 0.75);
 }
 
 html {
