@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import '../style.css';
-import { MouseEvent } from 'react';
+import { MouseEvent, useEffect } from 'react';
 
 interface ContainerProps {
   $position: 'center' | 'bottom';
@@ -17,7 +17,7 @@ const BackDrop = styled.div<BackDropProps>`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.35);
     display: ${props.$display};
@@ -101,6 +101,19 @@ function BaseModal({
       handleCloseButton();
     }
   };
+
+  useEffect(() => {
+    const body = document.body;
+    if (isOpen) {
+      body.style.overflowY = 'hidden';
+    } else {
+      body.style.overflowY = 'visible';
+    }
+
+    return () => {
+      body.style.overflowY = 'visible';
+    };
+  }, [isOpen]);
 
   return (
     <BackDrop
