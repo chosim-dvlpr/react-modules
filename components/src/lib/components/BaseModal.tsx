@@ -13,7 +13,7 @@ interface BackDropProps {
 
 const BackDrop = styled.div<BackDropProps>`
   ${(props) => css`
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
