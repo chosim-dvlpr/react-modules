@@ -64,6 +64,7 @@ const Container = styled.div<ContainerProps>`
   ${(props) => css`
     position: fixed;
     left: 50%;
+    max-height: 60%;
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
